@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/910ce80589.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>animated webdesign</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+               <img src="img/dark.png">
+            </div>
+            <div class="social-icon">
+              <i class="fa-brands fa-facebook-f facebook"></i>
+              <i class="fa-brands fa-twitter twitter"></i>
+              <i class="fa-brands fa-youtube youtube"></i>
+              <i class="fa-brands fa-instagram insta"></i>
+              <button class="btn">download cv</button>
+            </div>
+        </header>
+        <div class="content">
+            <div class="information">
+               <p class="tag">I'm</p>
+               <h1>jessica<br> parker</h1>
+               <p class="detils">
+                 A Passionate UI/UX Designer and Web<br> Developer based In NYC, USA
+               </p>
+                  <p class="videoBtn"><i class="fa-solid fa-play"></i> play video</p>
+            </div>
+          </div>
+            <div class="videoPage">
+                <div class="videoBox">
+                   <video src="img/mov_bbb.mp4" controls></video>
+                   <div class="close-btn"><i class="fa-solid fa-xmark"></i></div>
+                </div>
+            </div>
+            <div class="menu">
+               <div class="menu-box">
+                <i class="fa-solid fa-notes-medical"></i>
+                <p>about me</p>
+               </div>
+
+               <div class="menu-box">
+                <i class="fa-solid fa-gear"></i>
+                <p>resume</p>
+               </div>
+
+               <div class="menu-box">
+                <i class="fa-solid fa-globe"></i>
+                <p>protfolio</p>
+               </div>
+
+               <div class="menu-box">
+                <i class="fa-brands fa-servicestack"></i>
+                <p>service</p>
+               </div>
+
+               <div class="menu-box">
+                <i class="fa-solid fa-microscope"></i>
+                <p>testimonial</p>
+               </div>
+
+               <div class="menu-box">
+                <i class="fa-solid fa-blog"></i>
+                <p>blog</p>
+               </div>
+
+               <div class="menu-box">
+                <i class="fa-solid fa-address-book"></i>
+                <p>contact</p>
+               </div>
+            </div>
+            <div class="img-content">
+               <div class="back-site"></div>
+               <img src="img/heroPhoto.jpg">
+            </div>
+            <div class="animated">
+               <div class="circle"></div>
+               <div class="circle circle2"></div>
+               <div class="circle circle3"></div>
+               <div class="circle circle4"></div>
+               <div class="circle circle5"></div>
+            </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+        const videoBtn = document.querySelector('.videoBtn');
+        const videoPage = document.querySelector('.videoPage');
+        const closeBtn = document.querySelector('.close-btn');
+
+        videoBtn.addEventListener('click',()=>{
+          videoPage.classList.add('active');
+        });
+
+        closeBtn.addEventListener('click',()=>{
+          videoPage.classList.remove('active');
+        });
+
+        let animation = anime({
+          targets:'.logo',
+          translateX:[-80,0],
+          opacity:[0,1],
+          duration:800,
+          easing:'easeInOutSine',
+        });
+
+        anime({
+          targets:'.social-icon',
+          translateX:[80,0],
+          opacity:[0,1],
+          duration:800,
+          easing:'easeInOutSine',
+        });
+
+        anime({
+          targets:'.information .tag',
+          translateY:[40,0],
+          opacity:[0,1],
+          duration:800,
+          easing:'easeInOutSine',
+          delay:300,
+        });
+
+        anime({
+          targets:'.information h1',
+          translateY:[40,0],
+          opacity:[0,1],
+          duration:800,
+          easing:'easeInOutSine',
+          delay:600,
+        });
+
+        anime({
+          targets:'.information .detils',
+          translateY:[40,0],
+          opacity:[0,1],
+          duration:800,
+          easing:'easeInOutSine',
+          delay:800,
+        });
+
+        anime({
+          targets:'.information .videoBtn',
+          opacity:[0,1],
+          duration:800,
+          easing:'easeInOutSine',
+          delay:800,
+        });
+
+        anime({
+          targets:'.menu-box',
+          translateY:[60,0],
+          opacity:[0,1],
+          duration:800,
+          easing:'easeInOutSine',
+          delay:1000,
+        });
+
+        anime({
+          targets:'.img-content .back-site',
+          translateY:[60,0],
+          opacity:[0,1],
+          duration:800,
+          easing:'easeInOutSine',
+          delay:1100,
+        });
+
+        anime({
+          targets:'.img-content img',
+          translateY:[-60,0],
+          opacity:[0,1],
+          duration:800,
+          easing:'easeInOutSine',
+          delay:1300,
+        });
+
+        anime({
+          targets:'.animated',
+          opacity:[0,1],
+          duration:800,
+          easing:'easeInOutSine',
+          delay:1500,
+        });
+
+    </script>
+</body>
+</html>
